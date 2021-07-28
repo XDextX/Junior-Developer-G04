@@ -7,8 +7,9 @@ def get_data() -> str:
 
 
 def imprimir_informacion(veces: int):
+    data = get_data()
     for i in range(veces):
-        print(get_data())
+        print(data)
 
 
 if __name__ == '__main__':
