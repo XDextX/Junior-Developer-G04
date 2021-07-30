@@ -7,6 +7,24 @@
 # se procede a imprimir la lista completa
 # y dar el tamaño de la lista.
 # (El cero no se agrega en la lista).
+def get_dato():
+    dato: str = input("Ingrese un numero entero: ")
+    if dato.isdigit():
+        return int(dato)
+    else:
+        print("Debe ingresar un numero entero")
+        return get_dato()
+
+
+def make_list():
+    lista_enteros = []
+    dato = 1
+    while dato != 0:
+        dato = get_dato()
+        if dato != 0:
+            lista_enteros.append(dato)
+    return lista_enteros
+
 
 if __name__ == '__main__':
-    print("Hola")
+    print(make_list())
