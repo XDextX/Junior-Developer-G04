@@ -37,4 +37,10 @@ def ordenar(lista: list):
 
 
 if __name__ == '__main__':
-   
+    print("Ingrese la cantidad de numeros ganadores")
+    size = get_entero()
+    print("Ingrese los numeros ganadores de la loteria.")
+    lista = llenar_lista(size)
+    lista_ordenada = ordenar(lista)
+    print("Los nmumeros gandores son:")
+    imprimir(lista_ordenada)
