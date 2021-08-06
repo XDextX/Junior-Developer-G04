@@ -1,4 +1,12 @@
-# Created by German Montero at 4/8/2021
+# Pide una cadena por teclado, mete los caracteres en una lista sin espacios.
+def cortar_espacios(frase: str):
+    cadena = ""
+    for i in frase:
+        if i != " ":
+            cadena += i
+    return cadena
+
 
 if __name__ == '__main__':
-    print("Hola")
+    frase_original = input("Dijite una frase: ")
+    print(cortar_espacios(frase_original))
