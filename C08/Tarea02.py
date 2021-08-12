@@ -3,7 +3,11 @@
 def elimina_duplicados(lista: list):
     unicos = []
     for i in range(len(lista)):
-        if lista[i] not in unicos:
+        dupe = True
+        for j in range(len(unicos)):
+            if lista[i] == lista[j]:
+                dupe = False
+        if dupe:
             unicos.append(lista[i])
     return unicos
 
