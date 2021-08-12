@@ -7,11 +7,10 @@ import random
 
 
 def producto(m1: list[list], m2: list[list]):
-    resultado = []
+    resultado = 0
     for fila in range(len(m1)):
-        resultado.append([])
         for col in range(len(m1[fila])):
-            resultado[fila].append(m1[fila][col] * m2[fila][col])
+            resultado += m1[fila][col] * m2[fila][col]
     return resultado
 
 
@@ -53,8 +52,7 @@ def main():
     resutado = producto(m1, m2)
     print("El producto de las matrices: ")
     imprimir(m1, m2)
-    print("Es: ")
-    imprimir_single(resutado)
+    print(f"Es: {resutado}")
 
 
 if __name__ == '__main__':

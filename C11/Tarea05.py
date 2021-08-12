@@ -30,8 +30,12 @@ def sumar_diagonal(mat: list[list]):
     return sumatoria
 
 
-if __name__ == '__main__':
+def main():
     print("la suma de la diagonal en la matriz: ")
     matriz = obtener_matriz(3, 3)
     imprimir_single(matriz)
     print(f"Es {sumar_diagonal(matriz)}")
+
+
+if __name__ == '__main__':
+    main()
