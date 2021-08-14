@@ -7,10 +7,10 @@ import random
 
 
 def producto(m1: list[list], m2: list[list]):
-    resultado = 0
+    resultado = 1
     for fila in range(len(m1)):
         for col in range(len(m1[fila])):
-            resultado += m1[fila][col] * m2[fila][col]
+            resultado *= m1[fila][col] * m2[fila][col]
     return resultado
 
 

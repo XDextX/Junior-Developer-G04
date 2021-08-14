@@ -1,7 +1,5 @@
-# Created by German Montero at 12/8/2021
-# Construya un algoritmo que sume la diagonal de una matriz
-# (superior izquierda hasta inferior derecha). Solicitar el
-# tamaño de la matriz al iniciar y llenarlo de manera random
+# Created by German Montero at 13/8/2021
+#
 import random
 
 
@@ -25,17 +23,18 @@ def imprimir_single(mat: list[list]):
 
 def sumar_diagonal(mat: list[list]):
     sumatoria = 0
-    for i in range(len(mat)):
-        sumatoria += mat[i][i]
+    tam = len(mat)
+    for i in range(tam):
+        sumatoria += mat[i][tam - 1 - i]
     return sumatoria
 
 
 def main():
-    print("la suma de la diagonal en la matriz: ")
-    tam = int(input(""))
-    matriz = obtener_matriz(tam, tam)
-    imprimir_single(matriz)
-    print(f"Es {sumar_diagonal(matriz)}")
+    tam = 3
+    math = obtener_matriz(tam, tam)
+    print("la suma de la diagonal inversa de la matriz: ")
+    imprimir_single(math)
+    print(f"Es: {sumar_diagonal(math)}")
 
 
 if __name__ == '__main__':
