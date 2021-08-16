@@ -22,6 +22,13 @@ def imprimir_single(mat: list[list]):
     print(s)
 
 
-if __name__ == '__main__':
+def main():
+    t = tuplis()
+    imprimir_single(t)
     data = int(input("Ingrese un numero uno de los numeros anteriores: "))
-    
+    coincidencias = contar(data, t)
+    print(f"El dato {data} se encontro {coincidencias} veces")
+
+
+if __name__ == '__main__':
+    main()
