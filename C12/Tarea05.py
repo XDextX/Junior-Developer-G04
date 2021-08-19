@@ -19,8 +19,8 @@ def llenar():
     lista = []
     seguir = True
     while seguir:
-        dato = int(input("Ingrese cualquier numero entero: "))
-        #dato = random.randint(0, 20)
+        # dato = int(input("Ingrese cualquier numero entero: "))
+        dato = random.randint(0, 20)
         if dato != 0:
             lista.append(dato)
         else:
@@ -90,7 +90,7 @@ def imprimir_lista_tupla(lista: list[tuple]):
     print(s)
 
 
-if __name__ == '__main__':
+def main():
     lista = llenar()
     imprimir_single(lista)
     eliminacion = eliminar(lista)
@@ -107,3 +107,7 @@ if __name__ == '__main__':
     imprimir_single(lista)
     print("Es")
     imprimir_lista_tupla(contar_ocurrencias(lista))
+
+
+if __name__ == '__main__':
+    main()
